@@ -1,0 +1,157 @@
+body,html{
+margin:0;height:100%;
+font-family:Segoe UI;color:white;
+text-align:center;overflow:hidden;
+background:black;
+}
+
+/* THEMES */
+body.neon{background:black;}
+body.royal{background:radial-gradient(circle,#001,#006);}
+body.sunset{background:radial-gradient(circle,#400,#f60);}
+body.forest{background:radial-gradient(circle,#020,#040);}
+
+/* BREATHING GLOW */
+body::before{
+content:"";
+position:fixed;inset:0;
+background:radial-gradient(circle,rgba(255,0,255,.15),transparent 70%);
+animation:breathe 6s ease-in-out infinite;
+pointer-events:none;
+}
+@keyframes breathe{0%{opacity:.3;}50%{opacity:.8;}100%{opacity:.3;}}
+
+/* FIREWORK LAYER FIX */
+#fireworks{position:fixed;inset:0;z-index:0;pointer-events:none;}
+.card{position:relative;z-index:10;}
+
+/* CARD BASE */
+.card{
+margin:0 auto;
+background:rgba(0,0,0,.65);
+padding:30px;border-radius:28px;
+width:330px;box-sizing:border-box;
+}
+
+/* LANDING */
+.landingCard{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+/* GREETING */
+.bigCard{
+margin-top:6vh;
+background:rgba(0,0,0,.8);
+border-radius:32px;
+box-shadow:0 0 120px #ff00ff;
+animation:bigReveal 1s ease;
+}
+@keyframes bigReveal{
+from{opacity:0;transform:translateY(60px) scale(.9);}
+to{opacity:1;transform:none;}
+}
+
+/* BUTTONS */
+.glowBtn{
+width:100%;padding:12px;margin:10px 0;
+border-radius:14px;border:none;
+font-weight:bold;cursor:pointer;
+background:linear-gradient(45deg,#ff00ff,#00ffff);
+transition:.3s;
+}
+.glowBtn:hover{box-shadow:0 0 20px #00ffff,0 0 40px #ff00ff;transform:translateY(-2px);}
+.glowBtn:active{transform:scale(.95);}
+
+/* INPUT */
+input,select{
+width:100%;padding:12px;margin:8px 0;
+border-radius:14px;border:none;font-size:16px;
+}
+
+/* NAME GLOW */
+@keyframes glow{
+0%{text-shadow:0 0 10px #fff,0 0 30px #ff00ff;}
+50%{text-shadow:0 0 40px #00ffff;}
+100%{text-shadow:0 0 10px #fff,0 0 30px #ff00ff;}
+}
+#wishName{animation:glow 2s infinite;font-size:26px;}
+
+/* GREETING CARD */
+.greetingCard{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.2);
+border-radius:20px;
+padding:18px;margin:15px 0;
+backdrop-filter:blur(10px);
+animation:heartbeat 3s ease-in-out infinite;
+}
+@keyframes heartbeat{0%{transform:scale(1);}50%{transform:scale(1.03);}100%{transform:scale(1);}}
+
+/* FOOTER */
+.footerLine{opacity:.7;font-size:13px;}
+.brand{font-size:12px;opacity:.7;}
+
+#wishText{
+white-space:pre-line;     /* preserves new lines */
+line-height:1.3;
+text-align:left;
+}
+
+.wishTag{
+display:block;
+margin-top:12px;
+text-align:center;
+font-weight:bold;
+font-size:18px;
+}
+
+/* LIVE COUNTER */
+.liveCounter{font-size:13px;opacity:.7;animation:pulse 2s infinite;}
+@keyframes pulse{50%{opacity:1;}}
+
+/* TOUCH GLOW */
+.touchGlow{
+position:fixed;width:20px;height:20px;border-radius:50%;
+pointer-events:none;
+background:radial-gradient(circle,#00ffff,#ff00ff,transparent);
+mix-blend-mode:screen;
+animation:glowfade .6s linear forwards;
+}
+@keyframes glowfade{from{opacity:1;transform:scale(1);}to{opacity:0;transform:scale(3);}}
+
+/* FALLING SPARKLES */
+.light{
+position:fixed;top:-20px;width:6px;height:6px;border-radius:50%;
+background:#00ffff;opacity:.6;animation:fall linear infinite;
+}
+@keyframes fall{to{transform:translateY(110vh);}}
+
+/* THEME CARD MOODS */
+body.theme-neon .bigCard{
+background:rgba(40,0,40,.9);
+box-shadow:0 0 140px #ff00ff;
+}
+
+body.theme-royal .bigCard{
+background:rgba(0,0,80,.9);
+box-shadow:0 0 140px #00aaff;
+}
+
+body.theme-sunset .bigCard{
+background:rgba(80,30,0,.9);
+box-shadow:0 0 140px #ff9900;
+}
+
+body.theme-forest .bigCard{
+background:rgba(0,50,0,.9);
+box-shadow:0 0 140px #00ff99;
+}
+
+/* BUTTON MOODS */
+body.theme-neon .glowBtn{background:linear-gradient(45deg,#ff00ff,#00ffff);}
+body.theme-royal .glowBtn{background:linear-gradient(45deg,#0044ff,#00ffff);}
+body.theme-sunset .glowBtn{background:linear-gradient(45deg,#ff9900,#ffff66);}
+body.theme-forest .glowBtn{background:linear-gradient(45deg,#00ff99,#009966);}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WishByRaj ✨ Create Magical Wishes</title>
+<meta name="description" content="Create beautiful emotional wishes and greeting cards online with WishByRaj. New Year, Birthday, Love & Motivation wishes in Bengali, Hindi & English." />
+
+<meta name="keywords" content="new year wishes, birthday wishes, bengali wishes, hindi wishes, greeting card website, wish generator, emotional wishes, wishbyraj" />
+
+<meta name="author" content="RajCode-xs1dd">
+
+<meta property="og:title" content="WishByRaj — Create Magical Wishes">
+<meta property="og:description" content="Send beautiful emotional wishes to your loved ones in their own language.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://your-netlify-url.netlify.app/preview.png">
+<meta property="og:url" content="https://your-netlify-url.netlify.app">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="neon">
+
+<canvas id="fireworks"></canvas>
+
+<!-- CARD 1 : LANDING -->
+<div class="card landingCard glowMini" id="card1">
+  <h1>Create Your Magic Wish ✨</h1>
+
+  <select id="modeSelect">
+    <option value="newyear">🎆 New Year</option>
+    <option value="birthday">🎂 Birthday</option>
+    <option value="love">💖 Love</option>
+    <option value="motivation">🔥 Motivation</option>
+  </select>
+
+  <select id="themeSelect">
+    <option value="neon">🌈 Neon</option>
+    <option value="royal">💎 Royal Blue</option>
+    <option value="sunset">🌅 Sunset</option>
+    <option value="forest">🌲 Forest</option>
+  </select>
+
+  <input id="nameInput" placeholder="Enter your name">
+  <button class="glowBtn" onclick="generateWish()">Create My Wish</button>
+</div>
+
+<!-- CARD 2 : GREETING -->
+<div class="card bigCard glowBig hidden" id="card2">
+  <h2 id="wishName"></h2>
+  <div class="greetingCard">
+    <p id="wishText"></p>
+    <p class="footerLine">May all your silent prayers be answered 🤍</p>
+  </div>
+  <button class="glowBtn" onclick="copyLink()">Copy WishByRaj Link</button>
+  <a id="waShare" target="_blank"><button class="glowBtn">Share WishByRaj</button></a>
+  <div id="liveCounter" class="liveCounter"></div>
+  <div class="brand">Made with ❤️ by RajCode</div>
+</div>
+
+<audio id="bgm" src="music.mp3" preload="auto" loop></audio>
+<script src="script.js"></script>
+</body>
+</html>

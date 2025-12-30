@@ -13,8 +13,8 @@
 - Shareable link & WhatsApp sharing  
 - Background music  
 
-## 🌍 Live Demo
-https://your-netlify-url.netlify.app
+## 🌍 Live Demogit pull origin main
+https://wishbyraj.netlify.app/
 
 ## 🚀 Created By
 **RajCode-xs1dd**

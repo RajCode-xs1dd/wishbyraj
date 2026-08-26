@@ -85,6 +85,7 @@ background:rgba(255,255,255,.08);
 border:1px solid rgba(255,255,255,.2);
 border-radius:20px;
 padding:18px;margin:15px 0;
+-webkit-backdrop-filter:blur(10px);
 backdrop-filter:blur(10px);
 animation:heartbeat 3s ease-in-out infinite;
 }
@@ -93,6 +94,18 @@ animation:heartbeat 3s ease-in-out infinite;
 /* FOOTER */
 .footerLine{opacity:.7;font-size:13px;}
 .brand{font-size:12px;opacity:.7;}
+
+.footer a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: var(--gold-light);
+}
 
 #wishText{
 white-space:pre-line;     /* preserves new lines */

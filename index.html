@@ -26,14 +26,14 @@
 <div class="card landingCard glowMini" id="card1">
   <h1>Create Your Magic Wish ✨</h1>
 
-  <select id="modeSelect">
+  <select id="modeSelect" aria-label="Wish type">
     <option value="newyear">🎆 New Year</option>
     <option value="birthday">🎂 Birthday</option>
     <option value="love">💖 Love</option>
     <option value="motivation">🔥 Motivation</option>
   </select>
 
-  <select id="themeSelect">
+  <select id="themeSelect" aria-label="Wish theme">
     <option value="neon">🌈 Neon</option>
     <option value="royal">💎 Royal Blue</option>
     <option value="sunset">🌅 Sunset</option>
@@ -54,7 +54,9 @@
   <button class="glowBtn" onclick="copyLink()">Copy WishByRaj Link</button>
   <a id="waShare" target="_blank"><button class="glowBtn">Share WishByRaj via whatsapp</button></a>
   <div id="liveCounter" class="liveCounter"></div>
-  <div class="brand">Made with ❤️ by RajCode</div>
+  <footer class="footer">
+   ✨ Built with 🤍 by <a href="https://rajcode.netlify.app/" target="_blank" rel="noopener noreferrer">RajCode</a>
+  </footer>
 </div>
 
 <audio id="bgm" src="music.mp3" preload="auto" loop></audio>
